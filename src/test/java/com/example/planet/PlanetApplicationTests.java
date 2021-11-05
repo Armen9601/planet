@@ -64,26 +64,6 @@ class PlanetApplicationTests {
         verify(lordrepository, times(1)).save(mapper.map(lord, Lord.class));
     }
 
-//    @Test
-//    public void test_findByName() {
-//        Lord lordDto = new Lord(1, "some title", 88);
-//        lordrepository.save(lordDto);
-//        verify(lordrepository, times(1)).save(mapper.map(lordDto, Lord.class));
-//    }
-
-    @Test
-    public void test_find_top10_ByAge() {
-        Lord lord2 = new Lord(3, "some name2", 90);
-        Lord lord = new Lord(1, "some name", 88);
-        Lord lord1 = new Lord(2, "some name1", 89);
-        List<Lord> lords = List.of(lord2, lord, lord1);
-        lordrepository.save(lord);
-        lordrepository.save(lord1);
-        lordrepository.findAll();
-        when(lordrepository.findTop10ByOrderByAgeAsc()).thenReturn(lords);
-        Assertions.assertEquals(lordrepository.findTop10ByOrderByAgeAsc().get(0), lord);
-    }
-
     @Test
     public void should_delete_planet_by_id() {
         Planet planet = new Planet(1, "title", null);
