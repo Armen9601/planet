@@ -1,6 +1,5 @@
 package com.example.planet.repository;
 
-import com.example.planet.dto.PlanetDto;
 import com.example.planet.entity.Planet;
 import org.springframework.data.jpa.repository.JpaRepository;
 

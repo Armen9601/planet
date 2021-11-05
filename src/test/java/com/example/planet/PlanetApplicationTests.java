@@ -17,11 +17,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureTestEntityManager;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -39,9 +37,6 @@ class PlanetApplicationTests {
     private PlanetRepository planetRepository;
     @Spy
     private ModelMapper mapper;
-
-    public EntityManager entityManager;
-
 
     @Before
     public void init() {
